@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lịch Gym Giảm Mỡ Tăng Cơ | 75kg → Gọn bụng</title>
+  <meta name="description" content="Web lịch gym 1 tháng bắt đầu từ Chủ nhật, phù hợp người mới nâng tạ khoảng 5kg, có video hướng dẫn, checklist và cách tăng tạ." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__bg"></div>
+    <nav class="topbar">
+      <div class="brand">
+        <span class="brand__icon">🏋️</span>
+        <span>GymCut 30</span>
+      </div>
+      <div class="navlinks">
+        <a href="#lich">Lịch tập</a>
+        <a href="#tang-ta">Tăng tạ</a>
+        <a href="#an-uong">Ăn uống</a>
+      </div>
+    </nav>
+    <section class="hero__content">
+      <div class="badge">Bắt đầu hôm nay: Chủ nhật</div>
+      <h1>Lịch gym giảm mỡ, giữ cơ, gọn bụng bia</h1>
+      <p>Dành cho người 1m70, 75kg, mới nâng tạ khoảng 5kg. Mục tiêu 1 tháng: bụng gọn hơn, khỏe hơn, giữ cơ tốt hơn.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#lich">Xem lịch hôm nay</a>
+        <a class="btn btn--ghost" href="#tang-ta">Cách tăng tạ</a>
+      </div>
+      <div class="stats">
+        <div><strong>5</strong><span>buổi gym/tuần</span></div>
+        <div><strong>2</strong><span>ngày nhẹ/nghỉ</span></div>
+        <div><strong>3–4</strong><span>tuần tăng lực</span></div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="notice section">
+      <h2>Luật an toàn trước khi tập</h2>
+      <p>Không cần lao vào nâng nặng. Mỗi hiệp nên còn dư 2–3 reps, form phải đẹp, không đau khớp. Đau nhói vai, lưng dưới, gối hoặc khuỷu tay thì dừng bài đó và giảm tạ.</p>
+    </section>
+
+    <section id="lich" class="section">
+      <div class="section__head">
+        <span class="kicker">Workout plan</span>
+        <h2>Lịch tập từ Chủ nhật</h2>
+        <p>Ấn vào từng ngày để xem bài. Tick bài đã hoàn thành, web sẽ tự lưu trên trình duyệt.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Chọn ngày tập">
+        <button class="tab active" data-day="sun">CN</button>
+        <button class="tab" data-day="mon">T2</button>
+        <button class="tab" data-day="tue">T3</button>
+        <button class="tab" data-day="wed">T4</button>
+        <button class="tab" data-day="thu">T5</button>
+        <button class="tab" data-day="fri">T6</button>
+        <button class="tab" data-day="sat">T7</button>
+      </div>
+
+      <div id="workout-panel" class="workout-card"></div>
+    </section>
+
+    <section id="tang-ta" class="section grid2">
+      <div class="card big-card">
+        <span class="kicker">Progressive overload</span>
+        <h2>Cách tăng tạ từ mức 5kg</h2>
+        <p class="lead">Quy tắc chính: <b>tăng rep trước, tăng tạ sau</b>. Khi làm được 3 hiệp x 12–15 reps với form đẹp, lần sau mới tăng tạ.</p>
+        <div class="steps">
+          <div class="step"><span>1</span><p>Tuần 1: 5kg x 10 reps x 3 hiệp.</p></div>
+          <div class="step"><span>2</span><p>Tuần 2: 5kg x 12 reps x 3 hiệp.</p></div>
+          <div class="step"><span>3</span><p>Tuần 3: 5kg x 15 reps x 3 hiệp.</p></div>
+          <div class="step"><span>4</span><p>Tuần 4: thử 6kg hoặc 7.5kg, quay về 8–10 reps.</p></div>
+        </div>
+      </div>
+      <div class="card calculator">
+        <span class="kicker">Tính mức tạ</span>
+        <h2>Gợi ý tăng tạ</h2>
+        <label>Mức tạ hiện tại / mỗi tay</label>
+        <input id="weight" type="number" min="1" step="0.5" value="5" />
+        <label>Số reps làm được form đẹp</label>
+        <input id="reps" type="number" min="1" step="1" value="12" />
+        <button id="calc" class="btn btn--primary full">Tính gợi ý</button>
+        <div id="calc-result" class="result">Nhập số reps rồi bấm tính.</div>
+      </div>
+    </section>
+
+    <section id="an-uong" class="section">
+      <div class="section__head">
+        <span class="kicker">Cut nhẹ, không nhịn đói</span>
+        <h2>Ăn uống để bụng xuống mà vẫn có cơ</h2>
+      </div>
+      <div class="meal-grid">
+        <div class="meal"><h3>Sáng</h3><p>2 trứng + bánh mì/cơm ít + trái cây.</p></div>
+        <div class="meal"><h3>Trưa</h3><p>Cơm vừa + thịt/cá/gà + nhiều rau.</p></div>
+        <div class="meal"><h3>Trước tập</h3><p>1 quả chuối hoặc sữa chua ít đường.</p></div>
+        <div class="meal"><h3>Tối</h3><p>Đạm + rau + ít cơm hơn bữa trưa.</p></div>
+      </div>
+      <div class="avoid">
+        <b>Cắt mạnh nhất:</b> nước ngọt, trà sữa, đồ chiên, snack, ăn đêm. Không cần bỏ cơm hoàn toàn.
+      </div>
+    </section>
+
+    <section class="section video-section">
+      <div class="section__head">
+        <span class="kicker">Video nhanh</span>
+        <h2>Danh sách video hướng dẫn động tác</h2>
+        <p>Các nút này mở YouTube Search theo đúng bài tập để m xem form trước khi tập.</p>
+      </div>
+      <div id="video-list" class="video-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>GymCut 30 — lịch tập cá nhân hóa cho mục tiêu giảm mỡ, giữ cơ. Tập đúng form trước, tăng tạ sau.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
